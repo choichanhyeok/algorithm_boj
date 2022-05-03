@@ -21,3 +21,7 @@ for i in range(1, n):
         max = cost_list[i]
 
 print(nsum-max)
+
+
+
+
