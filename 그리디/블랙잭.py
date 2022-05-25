@@ -43,7 +43,7 @@ for i in range(n):
     for j in range(i+1, n):
         for k in range(j+1, n):
             sum_value = card_list[i] + card_list[j] + card_list[k]
-            if sum_value < m:
+            if sum_value <= m:
                 result = max(sum_value, result)
 print(result)
 
