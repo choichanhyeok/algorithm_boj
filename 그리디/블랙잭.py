@@ -24,8 +24,6 @@
 # result = 0
 # length = len(data)
 #
-# count = 0
-#
 # for i in range(0, length):
 #     for j in range(i + 1, length):
 #         for k in range(j + 1, length):
@@ -35,5 +33,18 @@
 #                 result = max(result, sum_value)
 # print(result)
 
+
+n, m = map(int, input().split(' '))
+card_list = list(map(int, input().split(' ')))
+
+result = 0
+
+for i in range(n):
+    for j in range(i+1, n):
+        for k in range(j+1, n):
+            sum_value = card_list[i] + card_list[j] + card_list[k]
+            if sum_value < m:
+                result = max(sum_value, result)
+print(result)
 
 
