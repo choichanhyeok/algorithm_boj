@@ -16,12 +16,12 @@ def get_receiver_top_orders(heights):
 
     return answer
 
-
-
-# def get_receiver_top_orders(heights):
-#     answer = [0] * len(heights)
 #
-#     while heights:
+#
+# # def get_receiver_top_orders(heights):
+# #     answer = [0] * len(heights)
+# #
+# #     while heights:
 #         height = heights.pop()
 #         for idx in range(len(heights) -1, -1, -1):
 #             if heights[idx] > height:
