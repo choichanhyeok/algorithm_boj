@@ -4,7 +4,7 @@ array = [5, 3, 2, 1, 6, 8, 7, 4]
 
 
 def merge_sort(array):
-    # 이 곳을 채워보세요!
+    # 여기 적으시오
     return array
 
 

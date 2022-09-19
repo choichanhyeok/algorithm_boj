@@ -2,8 +2,8 @@ input = [4, 6, 2, 9, 1]
 
 
 def insertion_sort(array):
-    # 이 부분을 채워보세요!
-    return
+        # 구현
+    return array
 
 
 insertion_sort(input)

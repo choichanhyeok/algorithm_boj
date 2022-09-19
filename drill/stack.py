@@ -1,7 +1,6 @@
 
 
 
-
 class Node:
     def __init__(self, value):
         self.data = value
@@ -17,9 +16,12 @@ class Stack:
         new_node.next = self.head
         self.head = new_node
 
+    def is_empty(self):
+        return self.head is None
+
     def pop(self):
         if self.is_empty():
-            return "ths Stack is Empty"
+            return "This stack is empty"
         delete_node = self.head
         self.head = self.head.next
 
@@ -27,11 +29,26 @@ class Stack:
 
     def peek(self):
         if self.is_empty():
-            return "the Stack is Empty"
+            return "This stack is empty"
+
         return self.head.data
 
-    def is_empty(self):
-        return self.head is None
+
+stack = Stack()
+stack.push(3)
+stack.push(4)
+print(stack.pop())
+print(stack.peek())
+stack.pop()
+print(stack.is_empty())
+
+
+
+
+
+
+
+
 
 
 
@@ -103,16 +120,16 @@ class Stack:
 #     def is_empty(self):
 #         return self.head is None
 
-
-stack = Stack()
-stack.push(3)
-print(stack.peek())
-stack.push(4)
-stack.push(5)
-print(stack.peek())
-print(stack.pop())
-print(stack.peek())
-print(stack.is_empty())
-print(stack.pop())
-print(stack.peek())
+#
+# stack = Stack()
+# stack.push(3)
+# print(stack.peek())
+# stack.push(4)
+# stack.push(5)
+# print(stack.peek())
+# print(stack.pop())
+# print(stack.peek())
+# print(stack.is_empty())
+# print(stack.pop())
+# print(stack.peek())
 
