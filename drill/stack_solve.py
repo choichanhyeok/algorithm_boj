@@ -9,14 +9,12 @@ def get_receiver_top_orders(heights):
 
     while heights:
         height = heights.pop()
-
         for idx in range(len(heights)-1, -1, -1):
             if height < heights[idx]:
                 answer[len(heights)] = idx + 1
                 break
 
     return answer
-
 
 
 

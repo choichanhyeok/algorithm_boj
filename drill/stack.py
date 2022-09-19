@@ -6,32 +6,36 @@ class Node:
         self.data = value
         self.next = None
 
-
 class Stack:
     def __init__(self):
         self.head = None
 
+    #TODO 1: push
     def push(self, value):
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
-    def is_empty(self):
-        return self.head is None
-
+    #TODO 2: pop
     def pop(self):
         if self.is_empty():
-            return "This stack is empty"
+            return "the Stack is Empty, can\'t apply pop"
         delete_node = self.head
         self.head = self.head.next
 
         return delete_node.data
 
-    def peek(self):
-        if self.is_empty():
-            return "This stack is empty"
 
+    #TODO 3: peek
+    def peek(self):
         return self.head.data
+
+    #TODO 4: isEmpty
+    def is_empty(self):
+        return self.head is None
+
+
+
 
 
 stack = Stack()

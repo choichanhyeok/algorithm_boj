@@ -3,13 +3,29 @@ target_list = [4, 5, 2, 3, 9, 10, 11, 5, 3, 3, 16, 3002]
 
 
 
+def bubble_sort(array):
+    n = len(array)
+
+    for i in range(n-1):
+        for j in range(n-1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+
+    return array
+
+
+
+
+
+
+
 # drill set
 input = [4, 6, 2, 9, 1]
 
 
-def bubble_sort(array):
-    # 여기서 부터
-    return array
+# def bubble_sort(array):
+#     # 여기서 부터
+#     return array
 
 
 bubble_sort(input)
