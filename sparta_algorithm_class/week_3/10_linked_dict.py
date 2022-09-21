@@ -1,6 +1,32 @@
 
 
 
+class linkedTuple:
+    def __init__(self):
+        items = []
+    def add(self, key, value):
+        self.items.append((key, value))
+    def get(self, key):
+        for k, v in self.items:
+            if k == key:
+                return v
+
+class linkedDict:
+    def __init__(self):
+        self.items = []
+        for _ in range(8):
+            self.items.append(linkedTuple())
+
+    def put(self, key, value):
+        index = hash(key) % len(self.items)
+        self.items[index].add(key, value)
+
+    def get(self, key):
+        index = hash(key) % len(self.items)
+        return self.items[index].get(key)
+
+
+
 class LinkedTuple:
     def __init__(self):
         self.items = list()
@@ -11,24 +37,6 @@ class LinkedTuple:
         for k, v in self.items:
             if key == k:
                 return v
-
-
-class LinkedTuple:
-    def __init__(self):
-        self.items = list()
-    def add(self, key, value):
-        self.items.append((key, value))
-
-    def get(self, key):
-        for k, v in self.items:
-            if key == k:
-                return v
-
-
-
-
-
-
 
 
 class LinkedDict:
