@@ -1,20 +1,17 @@
 
 
 
+
 def insertion_sort(array):
     n = len(array)
 
-    for i in range(1, n):
-        for j in range(i):
-            if array[i-j] < array[i-j-1]:
-                array[i-j], array[i-j-1] = array[i-j-1], array[i-j]
-            else:
-                break
+    # 삽입 정렬?:
+
+    for i in range(n-1):
+
+
 
     return array
-
-input = [4, 6, 2, 9, 1]
-
 
 
 
@@ -45,6 +42,31 @@ print("정답 = [-3, 32, 44, 56, 100] / 현재 풀이 값 = ",insertion_sort([10
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+# def insertion_sort(array):
+#     n = len(array)
+#
+#     for i in range(1, n):
+#         for j in range(i):
+#             if array[i-j] < array[i-j-1]:
+#                 array[i-j], array[i-j-1] = array[i-j-1], array[i-j]
+#             else:
+#                 break
+#
+#     return array
+#
+# input = [4, 6, 2, 9, 1]
 
 
 
