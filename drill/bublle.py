@@ -2,6 +2,14 @@ target_list = [4, 5, 2, 3, 9, 10, 11, 5, 3, 3, 16, 3002]
 
 
 
+# 버블 정렬은?
+# 전체 순회를 하면서 피봇(j)과 비교 대상(j+1)을 비교
+# 만약 j가 더 클시 j+1과 위치 변경
+# 이렇게 모든 위치의 비교를 통해 O(N^2)의 작업을 진행한다.
+
+
+
+
 def bubble_sort(array):
     n = len(array)
 
@@ -9,32 +17,15 @@ def bubble_sort(array):
         for j in range(n-1):
             if array[j] > array[j+1]:
                 array[j], array[j+1] = array[j+1], array[j]
-
     return array
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def bubble_sort(array):
+#     for i in range(len(array)-1):
+#         for j in range(len(array)-1):
+#             array[j], array[j+1] = array[j+1], array[j]
+#
+#     return array
 
 
 

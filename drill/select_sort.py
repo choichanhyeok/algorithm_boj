@@ -2,17 +2,83 @@
 
 
 
+
 def selection_sort(array):
     n = len(array)
 
-    for i in range(n):
+    for i in range(n-1):
         min_index = i
+
         for j in range(n-i):
             if array[i+j] < array[min_index]:
-                min_index = i + j
-        array[i], array[min_index] = array[min_index], array[i]
+                min_index = i+j
 
+        array[i], array[min_index] = array[min_index], array[i]
     return array
+
+# def selection_sort(array):
+#     n = len(array)
+#
+#     for i in range(n):
+#         min_index = i
+#         for j in range(n-i):
+#             if array[i+j] < array[min_index]:
+#                 min_index = i + j
+#         array[i], array[min_index] = array[min_index], array[i]
+#
+#     return array
+
+
+
+# 선택 정렬의 핵심은, 가장 큰(혹은 작은)값을 파악한 후 배열의 맨 뒤(큰 수)나 맨 앞(작은 수)로 정렬하는 것이다.
+# 최대 혹은 최솟값을 "선택"하는 것이 핵심 알고리즘이다.
+
+# 조건1. 최대값 찾아라,
+# 조건2. 대신 최대값은 맨 뒤로 갈거니까 j의 순회는 n-i가 되어야한다.
+# 조건3. max_index와 array[i+j]를 비교해 max_index를 i+j로 수정
+# 조건4. 순회 한번당 max_index와 i의 값을 스왑
+
+
+#
+# def selection_sort(array):
+#     n = len(array)
+#
+#     for i in range(n-1):
+#         max_index = i
+#
+#         for j in range(n-i):
+#             if array[i+j] < array[max_index]:
+#                 max_index = i+j
+#         array[i], array[max_index] = array[max_index], array[i]
+#
+#     return array
+
+
+# def selection_sort(array):
+#     n = len(array)
+#
+#     for i in range(n-1):
+#         max_index = i
+#         for j in range(n-i):
+#             if array[i+j] < array[max_index]:
+#                 max_index = i + j
+#
+#         array[max_index], array[i] = array[i], array[max_index]
+#
+#     return array
+
+# def selection_sort(array):
+#     n = len(array)
+#
+#     for i in range(n-1):
+#         max_index = i
+#         for j in range(n-i):
+#             if array[i+j] < array[max_index]:
+#                 max_index = i+j
+#
+#         array[i], array[max_index] = array[max_index], array[i]
+#
+#     return array
 
 
 
