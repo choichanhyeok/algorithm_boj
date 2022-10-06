@@ -1,20 +1,34 @@
 
 
 
-
+# key. (1) what? 최댓값을 선택해라. (2) how? array를 순회하며 비교해서, (3) 최대값은 i, 즉 시작 pivot 위치와 스왑한다.
 
 def selection_sort(array):
     n = len(array)
 
     for i in range(n-1):
         min_index = i
-
         for j in range(n-i):
-            if array[i+j] < array[min_index]:
-                min_index = i+j
+            if array[min_index] > array[i+j]:
+                min_index = i + j
 
-        array[i], array[min_index] = array[min_index], array[i]
+        array[min_index], array[i] = array[i], array[min_index]
     return array
+
+
+
+# def selection_sort(array):
+#     n = len(array)
+#
+#     for i in range(n-1):
+#         min_index = i
+#
+#         for j in range(n-i):
+#             if array[i+j] < array[min_index]:
+#                 min_index = i+j
+#
+#         array[i], array[min_index] = array[min_index], array[i]
+#     return array
 
 # def selection_sort(array):
 #     n = len(array)
