@@ -8,12 +8,7 @@ input = [4, 6, 2, 9, 1]
 # 조건4. 자기보다 작은 값이 나오면 순회를 중단한다. (이미 정렬된 리스트이기 때문에)
 
 
-
-
-# 삽입 정렬은 i가 증가하면서 탐색 범위를 넓히며, 탐색 대상을 "삽입" 하는거
-# 삽입 이후에 두 대상에 대해서 비교를 해야하는데, 비교는 역순으로 진행
-# 이미 정렬된 리스트이기에 비교문이 false를 도출할때 break
-
+#key. 탐색 대상을 하나씩 삽입 한다는 얘기
 def insertion_sort(array):
     n = len(array)
 
@@ -22,6 +17,22 @@ def insertion_sort(array):
             if array[i-j] < array[i-j-1]:
                 array[i-j], array[i-j-1] = array[i-j-1], array[i-j]
     return array
+
+
+
+
+# 삽입 정렬은 i가 증가하면서 탐색 범위를 넓히며, 탐색 대상을 "삽입" 하는거
+# 삽입 이후에 두 대상에 대해서 비교를 해야하는데, 비교는 역순으로 진행
+# 이미 정렬된 리스트이기에 비교문이 false를 도출할때 break
+#
+# def insertion_sort(array):
+#     n = len(array)
+#
+#     for i in range(n):
+#         for j in range(i):
+#             if array[i-j] < array[i-j-1]:
+#                 array[i-j], array[i-j-1] = array[i-j-1], array[i-j]
+#     return array
 
 
 

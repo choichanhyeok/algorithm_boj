@@ -2,19 +2,27 @@
 
 
 
+
+
+# 두 array를 비교하며 작은 것을 넣어준다.
 def merge(array1, array2):
     array1_index = 0
     array2_index = 0
     result = []
 
+
+    # TODO1. 두 배열의 각 요소들을 비교하며 작은 값들을 result에 추가
     while array1_index != len(array1) and array2_index != len(array2):
         if array1[array1_index] < array2[array2_index]:
             result.append(array1[array1_index])
             array1_index += 1
+
         else:
             result.append(array2[array2_index])
             array2_index += 1
 
+
+    # TODO2. 다 비워지지 않은 배열의 요소를 result에 append
     if array1_index == len(array1):
         while array2_index != len(array2):
             result.append(array2[array2_index])
@@ -22,10 +30,66 @@ def merge(array1, array2):
 
     if array2_index == len(array2):
         while array1_index != len(array1):
-            result.append(array1[array1_index])
+            result.append(array1)
             array1_index += 1
 
     return result
+
+
+
+
+# def merge(array1, array2):
+#     #TODO 1. 두 array를 순회하면서 작은 거 먼저
+#     array1_index = 0
+#     array2_index = 0
+#
+#     result = []
+#
+#     while array1_index != len(array1) and array2_index != len(array2):
+#         if array1[array1_index] < array2[array2_index]:
+#             result.append(array1[array1_index])
+#             array1_index += 1
+#         else:
+#             result.append(array2[array2_index])
+#             array2_index += 1
+#
+#
+#     if array1 == len(array1):
+#         while array2_index != len(array2):
+#             result.append(array2[array2_index])
+#             array2_index += 1
+#     if array2 == len(array2):
+#         while array1_index != len(array1):
+#             result.append(array1[array1_index])
+#             array1_index += 1
+#     return result
+
+
+
+# def merge(array1, array2):
+#     array1_index = 0
+#     array2_index = 0
+#     result = []
+#
+#     while array1_index != len(array1) and array2_index != len(array2):
+#         if array1[array1_index] < array2[array2_index]:
+#             result.append(array1[array1_index])
+#             array1_index += 1
+#         else:
+#             result.append(array2[array2_index])
+#             array2_index += 1
+#
+#     if array1_index == len(array1):
+#         while array2_index != len(array2):
+#             result.append(array2[array2_index])
+#             array2_index += 1
+#
+#     if array2_index == len(array2):
+#         while array1_index != len(array1):
+#             result.append(array1[array1_index])
+#             array1_index += 1
+#
+#     return result
 
 
 
