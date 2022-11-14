@@ -4,17 +4,48 @@ class MaxHeap:
 
     def insert(self, value):
         self.items.append(value)
-        cur_index = len(self.items) - 1
+        current_index = len(self.items)-1
 
-        while cur_index > 1:
-            parent_index = cur_index // 2
-            if self.items[parent_index] < self.items[cur_index]:
-                self.items[parent_index], self.items[cur_index] = self.items[cur_index], self.items[parent_index]
-                cur_index = parent_index
+        while current_index > 1:
+            parent_index = current_index//2
+
+            if self.items[parent_index] < self.items[current_index]:
+                self.items[parent_index], self.items[current_index] = self.items[current_index], self.items[parent_index]
+                current_index = parent_index
             else:
                 break
 
         return self.items
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class MaxHeap:
+#     def __init__(self):
+#         self.items = [None]
+#
+#     def insert(self, value):
+#         self.items.append(value)
+#         cur_index = len(self.items) - 1
+#
+#         while cur_index > 1:
+#             parent_index = cur_index // 2
+#             if self.items[parent_index] < self.items[cur_index]:
+#                 self.items[parent_index], self.items[cur_index] = self.items[cur_index], self.items[parent_index]
+#                 cur_index = parent_index
+#             else:
+#                 break
+#
+#         return self.items
 
 
 max_heap = MaxHeap()
