@@ -20,6 +20,32 @@ def dfs_recursion(adjacent_graph, cur_node, visited_array):
         if adjacent_node not in visited_array:
             dfs_recursion(adjacent_graph, adjacent_node, visited_array)
 
+
+
+# def dfs_recursion(adjacent_graph, cur_node, visited_array):
+#     visited_array.append(cur_node)
+#     for adjacent_node in adjacent_graph[cur_node]:
+#         if adjacent_node not in visited_array:
+#             dfs_recursion(adjacent_graph, adjacent_node, visited_array)
+# 각 cur_node의 인접 행렬을 뒤지면서, 해당 인접 노드가 방문 기록에 없으면 방문 기록에 추가해주는 dfs_recursion 실행, 이 경우 해당 노드의 인접 행렬도 다시 검사
+
+
+# def dfs_recursion(adjacent_graph, cur_node, visited_array):
+#     visited_array.append(cur_node)
+#
+#     for adjacent_node in adjacent_graph[cur_node]:
+#         if adjacent_node in visited_array:
+#             dfs_recursion(adjacent_graph, adjacent_node, visited_array)
+
+
+
+# def dfs_recursion(adjacent_graph, cur_node, visited_array):
+#     visited_array.append(cur_node)
+#
+#     for adjacent_node in adjacent_graph[cur_node]:
+#         if adjacent_node not in visited_array:
+#             dfs_recursion(adjacent_graph, adjacent_node, visited_array)
+
 # def dfs_recursion(adjacent_graph, cur_node, visited_array):
 #     visited_array.append(cur_node)
 #     for adjacent_node in adjacent_graph[cur_node]:
