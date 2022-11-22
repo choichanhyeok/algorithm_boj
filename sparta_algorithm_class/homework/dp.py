@@ -7,8 +7,16 @@ supply_recover_k = 30
 
 
 def get_minimum_count_of_overseas_supply(stock, dates, supplies, k):
-    # 풀어보세요!
-    return
+    answer = 0
+    last_added_date_index = 0
+    max_heap = []
+
+    while stock <= k:
+        while last_added_date_index < len(dates) and dates[last_added_date_index] <= stock:
+            heapq.heappush(max_heap, -supplies[last_added_date_index])
+            last_added_date_index += 1
+
+    return answer
 
 
 print(get_minimum_count_of_overseas_supply(ramen_stock, supply_dates, supply_supplies, supply_recover_k))
