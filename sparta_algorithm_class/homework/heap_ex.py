@@ -16,6 +16,10 @@ def get_minimum_count_of_overseas_supply(stock, dates, supplies, k):
             heapq.heappush(max_heap, -supplies[last_added_date_index])
             last_added_date_index += 1
 
+        answer += 1
+        heappop = heapq.heappop(max_heap)
+        stock += -heappop
+
     return answer
 
 
