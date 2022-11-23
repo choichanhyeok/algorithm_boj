@@ -19,8 +19,7 @@ def get_minimum_count_of_overseas_supply(stock, dates, supplies, k):
     date_index = 0
 
     while stock <= k:
-        while date_index < len(dates) and dates[date_index] <= stock: # 각 모든 입고 날짜에 stock이 정상적으로 동작할 수 있는지,
-                                                                      # 만약 그렇지 않다면 일단 아래 과정을 통해 stock 증가시키고 닷 ㅣ도전
+        while date_index < len(dates) and dates[date_index] <= stock: # 만약 재고보다 날짜가 크다면, 진행할 수 없다. 아래 코드들로 해외 공장으로부터 발주를 받아야한다.
             heapq.heappush(max_heap, -supplies[date_index])
             date_index += 1
         answer += 1
