@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # def solution(s):
 #     answer = []
 
@@ -35,3 +36,6 @@ def solution(s):
         b += len(s) - num
         s = bin(num)[2:]
     return [a, b]
+=======
+test
+>>>>>>> cf402bd85b1099bd3b5011db6848d8c8565d380b
